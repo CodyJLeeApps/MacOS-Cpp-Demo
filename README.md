@@ -68,6 +68,7 @@ You can see this basic information below, some of them aren't strictly required,
 </dict>
 </plist>
 ```
+<<<<<<< HEAD
 
 ### Building and Running the Project
 
