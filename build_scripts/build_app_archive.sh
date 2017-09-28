@@ -1,68 +1,43 @@
 #!/bin/sh
+export APP=MacOS-Cpp-Demo.app
 export WORKING_DIR=$PWD
 export BUILD_RES=$WORKING_DIR/build_resources
 export SCRIPTS=$WORKING_DIR/build_scripts
+export CPP_PROJECT=$WORKING_DIR/macos_exe_project
 export OUTPUT=$WORKING_DIR/output
-export APP=MacOS-Cpp-Demo.app
 export APP_CONTENTS=$OUTPUT/$APP/Contents
 export APP_RES=$APP_CONTENTS/Resources
-export MACDEPLOYQT=/Users/cody/Qt5.9.1/5.9.1/clang_64/bin/macdeployqt
-
-export ICON=PF_Icon.icns
+export ICON=ex_icon.icns
 export PLIST=Info.plist
-export JDK=pf_jdk_mac.zip
-export APPRUNNER=apprunner
+export APPRUNNER=ex_apprunner
 export APPRUNNER_SH=build_apprunner.sh
-export PFJAR=proctorfree.jar
-export PFJAR_SH=build_pf_jar.sh
-export DMG_SH=build_pf_dmg.sh
-export MACFLDR=__MACOSX
 
 echo 
-echo "***** Build PF MacOS Application Script *****"
-echo "Creating Application Archive..."
+echo
+echo "***** Build MacOS Application Bundle Script *****"
+echo "..Creating Application Archive"
 rm -rf $OUTPUT/*
 mkdir $OUTPUT/$APP
 
 echo ".."
 echo ".."
-echo "Filling App Structure"
-cd $OUTPUT/$APP
-mkdir Contents
-mkdir Contents/MacOS
-mkdir Contents/Resources
+echo "..Filling App Structure"
+mkdir $OUTPUT/$APP/Contents
+mkdir $OUTPUT/$APP/Contents/MacOS
+mkdir $OUTPUT/$APP/Contents/Resources
 
 echo ".."
 echo ".."
-echo "Unzipping / Placing JDK"
-unzip $BUILD_RES/$JDK -d $APP_CONTENTS
-rm -rf $APP_CONTENTS/$MACFLDR
-
-
-echo ".."
-echo ".."
-echo "Placing Plist and Icon Files"
-cp $BUILD_RES/$PLIST $APP_CONTENTS
-cp $BUILD_RES/$ICON $APP_RES
+echo "..Placing Plist and Icon Files"
+cp $BUILD_RES/$PLIST $APP_CONTENTS/$PLIST
+cp $BUILD_RES/$ICON $APP_RES/$ICON
 
 echo ".."
 echo ".."
-echo "Calling build_apprunner.sh"
-/bin/bash $SCRIPTS/$APPRUNNER_SH
+echo "..Building C++ Project and Placing into Application Bundle"
+g++ $CPP_PROJECT/HelloWorld.cpp -o $OUTPUT/ex_apprunner
 cp $OUTPUT/$APPRUNNER $APP_CONTENTS/MacOS
 
 echo ".."
 echo ".."
-echo "Calling build_pf_jar.sh"
-/bin/bash $SCRIPTS/$PFJAR_SH
-cp $OUTPUT/$PFJAR/*.jar $APP_RES
-
-echo ".."
-echo ".."
-echo "Building the AppRunner items for Release:"
-$MACDEPLOYQT $OUTPUT/$APP
-
-echo ".."
-echo ".."
-echo "Building the Final DMG for Deployment"
-/bin/bash $SCRIPTS/$DMG_SH
+echo "***** Build of application bundle is complete *****"
