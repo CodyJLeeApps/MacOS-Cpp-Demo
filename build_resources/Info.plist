@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	
+	<key>CFBundleExecutable</key>
+	<string>ex_apprunner</string>
+	
+	<key>CFBundleIconFile</key>
+	<string>ex_icon.icns</string>
+	
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>1.0</string>
+	
+	<key>CFBundleIdentifier</key>
+	<string>com.codyjleeapps.development</string>
+	
+	<key>CFBundleName</key>
+	<string>MacOS-Cpp-Demo</string>
+	
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0.0</string>
+	
+	<key>CFBundleSignature</key>
+	<string>CJL</string>
+	
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright ©2017 CodyJLeeApps, All rights reserved.</string>
+	
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	
+	<key>LSMinimumSystemVersion</key>
+	<string>10.6</string>
+
+</dict>
+</plist>
