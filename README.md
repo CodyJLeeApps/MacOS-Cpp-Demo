@@ -68,8 +68,6 @@ You can see this basic information below, some of them aren't strictly required,
 </dict>
 </plist>
 ```
-<<<<<<< HEAD
-
 ### Building and Running the Project
 
 #### Directly Building the Application
@@ -88,9 +86,14 @@ You can run this script from the Terminal by running the following command withi
 
 Once you run this script you can open the application directly by double-clicking the application bundle.
 
-You should see the following output when you run the application:
+The script will provide the following output if working correctly:
+![Example Script Output](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo/blob/master/readme_resources/Example_Script_Output.png)
 
-![Example Output](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo/blob/master/readme_resources/Example_App_Output.png)
+
+You shouldn't see any output when running the application from the apps folder, this is because the terminal output is surpressed automatically.
+If the executable is ran by itself you should see this output:
+
+![Example App Output](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo/blob/master/readme_resources/Example_App_Output.png)
 
 Now that you have used the script to build the application you can modify the C++ executable as you see fit. Feel free to use the script to quickly build your own applications.
 
