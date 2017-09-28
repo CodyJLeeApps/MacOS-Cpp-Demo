@@ -16,11 +16,11 @@ See the following Apple Developer link to see the full description of an Applica
 
 [MacOS Bundle Structures](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html#//apple_ref/doc/uid/10000123i-CH101-SW1)
 
-![Basic Application Bundle](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo.git/readme_resources/Basic_App_Bundle.png)
+![Basic Application Bundle](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo/blob/master/readme_resources/Basic_App_Bundle.png)
 
 In our example case the only folders we care about are the following:
 
-![Example Application Bundle](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo.git/readme_resources/Example_App_Bundle.png)
+![Example Application Bundle](https://github.com/CodyJLeeApps/MacOS-Cpp-Demo/blob/master/readme_resources/Example_App_Bundle.png)
 
 The Info.plist file includes basic information about the application that MacOS requires to run the application. 
 
